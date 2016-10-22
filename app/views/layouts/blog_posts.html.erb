@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RorExample Blog Posts</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= image_tag "rails.png" %>
+
+<% if content_for? :header %>
+	<%= yield :header %>
+<% else %>
+	<p>default header</p>
+<% end %>
+<%= yield %>
+
+</body>
+</html>
